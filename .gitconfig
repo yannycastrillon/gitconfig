@@ -22,11 +22,13 @@
 	browse = "!hub browse"
 	ca = commit --amend
 	co = checkout
+	compare = !hub compare
 	cm = commit -m
 	conflict = "!git ls-files -u | awk '{print $4}' | sort -u"
 	df = diff --word-diff --color-words
 	fall = "!for remote in $(git remote); do echo "fetching $remote"; git fetch "$remote"; done"
 	glog = log -E -i --grep
+	issues = !hub browse --issues
 	ps = push
 	master = checkout master
 	sla = log --oneline --decorate --graph --all -20
