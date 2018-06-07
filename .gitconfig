@@ -1,0 +1,48 @@
+[color]
+  ui = auto
+[color "branch"]
+  current = yellow bold
+  local = green bold
+  remote = cyan bold
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+[color "status"]
+  added = green bold
+  changed = yellow bold
+  untracked = red bold
+[diff]
+  tool = vimdiff
+[alias]
+  aa = add --all
+  b = branch
+  browse = "!hub browse"
+  ca = commit --amend
+  co = checkout
+  conflict = "!git ls-files -u | awk '{print $4}' | sort -u"
+  df = diff --word-diff --color-words
+  fall = "!for remote in $(git remote); do echo "fetching $remote"; git fetch "$remote"; done"
+  glog = log -E -i --grep
+  ps = push
+  master = checkout master
+  sla = log --oneline --decorate --graph --all -20
+  pl = pull
+  ri = rebase -i
+  unchange = checkout --
+[user]
+  name = Yanny Castrillon
+  email = yannyandres117@gmail.com
+[credential]
+  helper = cache
+[push] # Git how to respond when you run 'git push' with no arguments.
+  default = upstream
+[merge] # Git to reject merges that are non-fastforward.
+  ff = only
+[fetch] # Clear local references to remote branches which have been deleted when you pull.
+  prune = true
+[rerere]
+  enabled = true
+
