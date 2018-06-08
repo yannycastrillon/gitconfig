@@ -27,14 +27,20 @@
 	conflict = "!git ls-files -u | awk '{print $4}' | sort -u"
 	df = diff --word-diff --color-words
 	fall = "!for remote in $(git remote); do echo "fetching $remote"; git fetch "$remote"; done"
+	# search for specific stream of characters on a commit message.
 	glog = log -E -i --grep
 	issues = !hub browse --issues
 	ps = push
 	master = checkout master
 	sla = log --oneline --decorate --graph --all -20
 	pl = pull
+	# Show pretty custom format of time and author of the commits.
+	pretty = "!git log --pretty=format:'%C(yellow)%h %C(reset) - %an [%C(green)%ar%C(reset)] => %s'"
 	ri = rebase -i
 	unchange = checkout --
+	# Unstage a filename
+	unstaged = reset
+	uncommit = "!git reset --soft HEAD^"
 [user]
 	name = Yanny Castrillon
 	email = yannyandres117@gmail.com
