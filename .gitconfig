@@ -32,6 +32,7 @@
 	issues = !hub browse --issues
 	ps = push
 	master = checkout master
+	mup = "!git checkout master && git pull master && git checkout -"
 	sla = log --oneline --decorate --graph --all -20
 	pl = pull
 	# Show pretty custom format of time and author of the commits.
