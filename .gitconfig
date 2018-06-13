@@ -21,6 +21,7 @@
 	b = branch
 	browse = "!hub browse"
 	ca = commit --amend
+	cb = "!git rev-parse --abbrev-ref HEAD"
 	co = checkout
 	compare = !hub compare
 	cm = commit -m
