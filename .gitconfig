@@ -26,6 +26,7 @@
 	compare = !hub compare
 	cm = commit -m
 	conflict = "!git ls-files -u | awk '{print $4}' | sort -u"
+	dc = diff --word-diff --cached --color-words
 	df = diff --word-diff --color-words
 	fall = "!for remote in $(git remote); do echo "fetching $remote"; git fetch "$remote"; done"
 	# search for specific stream of characters on a commit message.
@@ -41,7 +42,7 @@
 	ri = rebase -i
 	unchange = checkout --
 	# Unstage a filename
-	unstaged = reset
+	unstage = reset
 	uncommit = "!git reset --soft HEAD^"
 	upstream = rev-parse --abbrev-ref --symbolic-full-name @{u}
 [user]
